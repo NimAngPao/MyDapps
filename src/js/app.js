@@ -12,7 +12,7 @@ App = {
             articleTemplate.find('.article-price').text('10.24');
             articleTemplate.find('.article-seller').text('Seller Name');
 
-            articleRow.append(articleTemplate);
+            articlesRow.append(articleTemplate.html());
 
           return App.initWeb3();
      },
