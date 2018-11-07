@@ -3,9 +3,16 @@ App = {
      contracts: {},
 
      init: function() {
-          /*
-           * Replace me...
-           */
+
+            var articleRow = $('#articalRow');
+            var articleTemplate = $('#articleTemplate');
+
+            articleTemplate.find('.panel-title').text('Order No. 1');
+            articleTemplate.find('.article-description'.text('Description 1'));
+            articleTemplate.find('.article-price').text('10.24');
+            articleTemplate.find('.article-seller').text('Seller Name');
+
+            articleRow.append(articleTemplate);
 
           return App.initWeb3();
      },
