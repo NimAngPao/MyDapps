@@ -31,10 +31,11 @@ App = {
      displayAccountInfo: function(){
 
             web3.eth.getCoinbase(function(err, balance){
-                  if(err === undefined){
+                  if(err === null){
                         console.log("No errer");
 
-                        App.account = account;
+                        App.account = balance;
+                        console.log(balance);
                         $('#account').text(account);
                   }else{
                         console.log(err);
