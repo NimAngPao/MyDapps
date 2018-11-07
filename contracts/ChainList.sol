@@ -21,7 +21,7 @@ contract ChainList {
         address _seller,
         string _name,
         string _description,
-         uint256 _price
+        uint256 _price
     ) {
         return (seller, name, description, price);
     }
