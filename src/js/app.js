@@ -61,6 +61,19 @@ App = {
                   return App.reloadArticles();
             });
      },
+
+     reloadArticles: function(){
+           App.displayAccountInfo();
+
+           $('#articleRow').empty();
+
+           App.contracts.ChainList.deployed().then( function(instance){
+                  return instance.getArticle();
+           }).then(function(article){
+                 console.log(article);
+           });
+
+     }
 };
 
 $(function() {
